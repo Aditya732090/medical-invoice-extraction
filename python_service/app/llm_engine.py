@@ -1,13 +1,4 @@
-"""
-llm_engine.py
 
-Sends a base64-encoded image to an OpenAI LLM (vision-capable) and requests structured JSON.
-
-NOTE:
-- This file uses the `openai` Python package and the ChatCompletion endpoint in a general manner.
-- Set environment variable OPENAI_API_KEY before running.
-- Set OPENAI_MODEL to a vision-capable model you have access to (e.g. "gpt-4o-mini" or a vision-capable name).
-"""
 
 import os
 import json

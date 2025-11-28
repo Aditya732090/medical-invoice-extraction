@@ -1,7 +1,4 @@
-"""
-FastAPI service that accepts an uploaded image or PDF, encodes each page to base64,
-sends each page to the LLM via llm_engine.extract_from_image_b64, and returns a combined JSON.
-"""
+
 
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
