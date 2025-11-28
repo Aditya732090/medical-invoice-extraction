@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  python_service:
+    build: ./python_service
+    container_name: python_service
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL}
+  java_api:
+    build: ./java_api
+    container_name: java_api
+    depends_on:
+      - python_service
+    ports:
+      - "8080:8080"
